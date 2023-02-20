@@ -23,3 +23,4 @@ we increment n by 1 and calculate the probability of no two people having the sa
 We then multiply this probability with prob to get the cumulative probability. We keep iterating until prob drops below 0.6.
 
 Finally, we print the value of n, which gives us the minimum number of people needed for a 40% probability of at least two people having the same birthday.
+prob represents the probability of no two people having the same birthday in a group of n people.
