@@ -1,0 +1,33 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+//Note that I also added +'0' to the end of the ans+= lines to convert the digits to characters before appending them to the string. 
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int n;
+    cin>>n;
+    string ans="";
+    while(n>0)
+    {
+        int rem=n%10;
+        int inv=9-rem;
+        if(rem>inv)
+        {
+            ans+=inv+'0';
+        }
+        else
+        {
+            ans+=rem+'0';
+        }
+        n=n/10;
+    }
+    reverse(ans.begin(),ans.end());
+    cout<<ans<<endl;
+     cout.flush();
+}
