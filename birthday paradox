@@ -1,0 +1,25 @@
+for 40 percent probability
+To calculate the minimum number of people needed for a 40% probability of at least two people having the same birthday, we can modify the code as follows:
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    double prob = 1.0;
+    int n = 0;
+
+    while (prob > 0.6) {
+        n++;
+        prob *= (365.0 - n + 1) / 365.0;
+    }
+
+    cout << n << endl;
+
+    return 0;
+}
+Here, we set prob to 1 and initialize n to 0. We then enter a loop that keeps iterating until the probability prob drops below 0.6 
+(since we want a 40% probability, which is equivalent to a 60% probability of no two people having the same birthday). Inside the loop,
+we increment n by 1 and calculate the probability of no two people having the same birthday, just like in the previous code. 
+We then multiply this probability with prob to get the cumulative probability. We keep iterating until prob drops below 0.6.
+
+Finally, we print the value of n, which gives us the minimum number of people needed for a 40% probability of at least two people having the same birthday.
